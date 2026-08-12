@@ -1,0 +1,129 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  padding: var(--spacing-16);
+}
+
+.authWrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-32);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-8);
+  margin-top: 0;
+}
+
+.subtitle {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-caption);
+  font-family: var(--font-family-body);
+  transition: opacity var(--transition-speed) var(--transition-curve);
+  align-self: flex-start;
+}
+
+.link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+.footer {
+  margin-top: var(--spacing-24);
+  text-align: center;
+}
+
+.footerText {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.footerLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  margin-left: var(--spacing-4);
+  font-family: var(--font-family-body);
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+}
+
+.roleSelector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.roleLabel {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-label);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.select {
+  width: 100%;
+  padding: 0 var(--spacing-12);
+  height: 40px;
+  border: var(--border-weight) var(--border-style) var(--color-border);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+  transition: all var(--transition-speed) var(--transition-curve);
+  appearance: none;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.2);
+}
+
+.errorBanner {
+  color: var(--color-error);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-caption);
+  margin-top: var(--spacing-8);
+  margin-bottom: 0;
+  text-align: center;
+}

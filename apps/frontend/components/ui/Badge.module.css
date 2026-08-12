@@ -1,0 +1,56 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-label);
+  line-height: 1;
+  padding: var(--spacing-4) var(--spacing-12);
+  border-radius: 9999px; /* Pill-shaped */
+  white-space: nowrap;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+/* 1. Neutral (Greyish) */
+.neutral {
+  background-color: var(--color-accent-bg);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+
+/* 2. Primary (Cobalt Blue Accent) */
+.primary {
+  background-color: rgba(43, 76, 255, 0.08);
+  color: var(--color-primary);
+  border-color: rgba(43, 76, 255, 0.15);
+}
+
+/* 3. Success (Green Accent) */
+.success {
+  background-color: rgba(16, 185, 129, 0.08);
+  color: var(--color-success);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+/* 4. Warning (Amber Accent) */
+.warning {
+  background-color: rgba(245, 158, 11, 0.08);
+  color: var(--color-warning);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+/* 5. Danger (Red Accent / Blocked) */
+.danger {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: var(--color-error);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+/* 6. Info (Cyan / Secondary blueish Accent) */
+.info {
+  background-color: rgba(71, 85, 105, 0.08);
+  color: var(--color-secondary);
+  border-color: rgba(71, 85, 105, 0.15);
+}

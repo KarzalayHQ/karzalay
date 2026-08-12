@@ -1,0 +1,38 @@
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Html } from '@react-three/drei';
+
+function RotatingBox() {
+  return (
+    <mesh rotation={[0.4, 0.2, 0]}>
+      <boxGeometry args={[2, 2, 2]} />
+      <meshStandardMaterial color="#3b82f6" />
+    </mesh>
+  );
+}
+
+export const ThreeHero: React.FC = () => {
+  return (
+    <section className="relative w-full h-[400px] lg:h-[600px] bg-gradient-to-r from-indigo-500 to-purple-600 overflow-hidden">
+      <Canvas camera={{ position: [0, 0, 8] }}>
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[5, 5, 5]} intensity={1} />
+        <Suspense fallback={null}>
+          <RotatingBox />
+        </Suspense>
+        <OrbitControls enableZoom={false} enablePan={false} />
+      </Canvas>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">
+          Build the Future of Founders
+        </h1>
+        <p className="text-lg md:text-xl mb-6 drop-shadow-md">
+          Join Karzalay to discover, connect, and grow.
+        </p>
+        <a href="/register" className="bg-white text-indigo-700 font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition">
+          Get Started
+        </a>
+      </div>
+    </section>
+  );
+};

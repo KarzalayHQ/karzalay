@@ -1,0 +1,136 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  border: var(--border-weight) var(--border-style) transparent;
+  border-radius: var(--radius-btn);
+  transition: all var(--transition-speed) var(--transition-curve);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Sizing Options */
+.sm {
+  padding: var(--spacing-4) var(--spacing-12);
+  font-size: var(--font-size-caption);
+}
+
+.md {
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-size-body);
+}
+
+.lg {
+  padding: var(--spacing-12) var(--spacing-24);
+  font-size: var(--font-size-body-large);
+}
+
+/* Variants Styling */
+
+/* 1. Primary (Filled Brand Color) */
+.primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43, 76, 255, 0.15);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+.primary:disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+/* 2. Secondary (Outlined) */
+.secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--color-background);
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+  transform: translateY(-1px);
+}
+
+.secondary:active:not(:disabled) {
+  transform: translateY(0);
+  background-color: var(--color-border);
+}
+
+.secondary:disabled {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+/* 3. Danger (Red) */
+.danger {
+  background-color: var(--color-error);
+  color: #FFFFFF;
+}
+
+.danger:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+.danger:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.95);
+}
+
+.danger:disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+/* 4. Ghost (Text Only) */
+.ghost {
+  background-color: transparent;
+  color: var(--color-text-primary);
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--color-accent-bg);
+  color: var(--color-primary);
+}
+
+.ghost:active:not(:disabled) {
+  background-color: var(--color-border);
+}
+
+.ghost:disabled {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}

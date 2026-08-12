@@ -1,0 +1,79 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: 100%;
+  font-family: var(--font-family-body);
+}
+
+.label {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-heading);
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-12) var(--spacing-16);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-body);
+  background-color: var(--color-surface);
+  border: var(--border-weight) var(--border-style) var(--color-border);
+  border-radius: var(--radius-btn);
+  color: var(--color-text-primary);
+  transition: all var(--transition-speed) var(--transition-curve);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+}
+
+.input:focus:not(:disabled) {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(43, 76, 255, 0.1);
+  background-color: var(--color-surface);
+}
+
+/* Disabled State */
+.disabled .label {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.input:disabled {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Error State */
+.hasError .input {
+  border-color: var(--color-error);
+}
+
+.hasError .input:focus:not(:disabled) {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.errorMessage {
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-label);
+  color: var(--color-error);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0;
+}

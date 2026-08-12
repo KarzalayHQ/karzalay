@@ -1,0 +1,126 @@
+:root {
+  /* Spacing Scale (Base unit 8px) */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  /* Universal Semantics */
+  --color-error: #EF4444;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+
+  --font-fallback-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-fallback-serif: "Georgia", Cambria, serif;
+
+  /* GLOBAL THEME PROFILE: ACADEMIC AMETHYST */
+  --theme-name: "Academic Amethyst";
+  --color-primary: #7C3AED; /* Royal Amethyst Purple */
+  --color-secondary: #D946EF; /* Vibrant Plum */
+  --color-background: #FAF8FC; /* Lavender Alabaster */
+  --color-surface: #FFFFFF;
+  --color-border: #EAE5F3;
+  --color-border-hover: #7C3AED;
+  --color-text-primary: #1E1B29;
+  --color-text-secondary: #5C5870;
+  --color-accent-bg: #F3E8FF;
+
+  --font-family-heading: var(--font-lora), var(--font-fallback-serif);
+  --font-family-body: var(--font-inter), var(--font-fallback-sans);
+  
+  --font-size-h1: clamp(2.5rem, 5vw, 4rem);
+  --font-size-h2: clamp(1.8rem, 3.5vw, 2.75rem);
+  --font-size-h3: clamp(1.4rem, 2.5vw, 1.75rem);
+  --font-size-body-large: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.875rem;
+  --font-size-label: 0.75rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-heading: 1.15;
+  --line-height-body: 1.6;
+
+  --radius-card: 8px;
+  --radius-btn: 6px;
+  --border-weight: 1px;
+  --border-style: solid;
+  --shadow-card: 0 2px 8px rgba(124, 58, 237, 0.02);
+  --shadow-hover: 0 10px 24px rgba(124, 58, 237, 0.05);
+  --transition-speed: 0.35s;
+  --transition-curve: cubic-bezier(0.4, 0, 0.2, 1);
+  --grid-opacity: 0.03;
+}
+
+/* Neutral classes for UI items to translate variables dynamically */
+.ds-container {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  transition: all var(--transition-speed) var(--transition-curve);
+  min-height: 100vh;
+}
+
+.ds-card {
+  background-color: var(--color-surface);
+  border: var(--border-weight) var(--border-style) var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-speed) var(--transition-curve);
+}
+
+.ds-card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.ds-btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-btn);
+  border: var(--border-weight) var(--border-style) transparent;
+  transition: all var(--transition-speed) var(--transition-curve);
+}
+
+.ds-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.ds-btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  border: var(--border-weight) var(--border-style) var(--color-border);
+  border-radius: var(--radius-btn);
+  transition: all var(--transition-speed) var(--transition-curve);
+}
+
+.ds-btn-secondary:hover {
+  border-color: var(--color-border-hover);
+  background-color: var(--color-background);
+}
+
+.ds-heading {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.02em;
+}
+
+.ds-body {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
