@@ -14,6 +14,13 @@ export async function PATCH(request: NextRequest) {
 
 async function handleRequest(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
+  // The public staging site must never accept credentials as a real account flow.
+  if (pathname === '/api/auth/me') {
+    return NextResponse.json({ error: 'Use the workspace to sign in.' }, { status: 401 });
+  }
+  if (pathname.startsWith('/api/auth/') && pathname !== '/api/auth/logout') {
+    return NextResponse.json({ error: 'Personal enrollment is not open yet. Existing members can sign in at staging.karzalay.org.' }, { status: 503 });
+  }
   let currentGate = parseInt(request.cookies.get('mockGate')?.value || '1', 10);
 
   let payload: any = {};
