@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: '/login', destination: 'https://staging.karzalay.org/login', permanent: false },
-      { source: '/dashboard', destination: 'https://staging.karzalay.org/', permanent: false },
+      { source: '/dashboard', destination: 'https://staging.karzalay.org/workspace', permanent: false },
       { source: '/register', destination: 'https://staging.karzalay.org/enroll', permanent: false },
     ];
   },
