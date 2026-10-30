@@ -1,0 +1,15 @@
+.section { max-width:1240px; margin:0 auto; padding:12px 40px 80px; scroll-margin-top:110px; }
+.eyebrow { font-size:13.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#6C3CE0; margin-bottom:18px; }
+.section h2 { font-weight:800; font-size:clamp(28px,4vw,44px); line-height:1.08; letter-spacing:-.025em; color:#1C1233; margin-bottom:30px; }
+.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.card { display:flex; flex-direction:column; align-items:flex-start; padding:28px; border-radius:20px; background:#FAF9FE; border:1px solid rgba(28,18,51,.08); }
+.label { color:#6C3CE0; font-size:13px; font-weight:700; margin-bottom:12px; }
+.card h3 { color:#1C1233; font-weight:800; font-size:26px; letter-spacing:-.02em; }
+.card p { margin:12px 0 26px; color:#5A5270; font-size:16px; line-height:1.6; }
+.primary,.secondary { display:inline-flex; align-items:center; justify-content:center; padding:16px 24px; border-radius:14px; font-weight:700; font-size:16px; text-decoration:none; margin-top:auto; }
+.primary { background:linear-gradient(135deg,#7C4DFF,#6C3CE0); color:#fff; box-shadow:0 12px 30px rgba(108,60,224,.2); }
+.secondary { background:#fff; color:#1C1233; border:1.5px solid rgba(28,18,51,.14); }
+.returnLink { color:#6C3CE0; font-size:14px; font-weight:600; margin-top:18px; }
+.card small { color:#5A5270; font-size:12px; line-height:1.6; margin-top:18px; }
+.section a:focus-visible { outline:3px solid #6C3CE0; outline-offset:4px; }
+@media(max-width:700px){.section{padding:12px 24px 56px}.grid{grid-template-columns:1fr}.card{padding:24px}}

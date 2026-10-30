@@ -16,6 +16,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Navbar } from '@/components/ui/Navbar';
 import { CredentialCard } from '@/components/ui/CredentialCard';
+import { EntryPaths } from '@/components/EntryPaths';
 
 export const metadata: Metadata = {
   title: "Karzalay – India's Startup Sprint Network",
@@ -56,8 +57,8 @@ export default function HomePage() {
             </p>
             
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-              <Link href="/register" className="kz-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: 'linear-gradient(135deg,#7C4DFF,#6C3CE0)', color: '#fff', padding: '16px 28px', borderRadius: '14px', fontWeight: 700, fontSize: '16px', boxShadow: '0 12px 30px rgba(108,60,224,0.34)' }}>
-                Join a Sprint <span style={{ fontSize: '18px' }}>→</span>
+              <Link href="#choose-path" className="kz-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: 'linear-gradient(135deg,#7C4DFF,#6C3CE0)', color: '#fff', padding: '16px 28px', borderRadius: '14px', fontWeight: 700, fontSize: '16px', boxShadow: '0 12px 30px rgba(108,60,224,0.34)' }}>
+                Choose your path <span style={{ fontSize: '18px' }}>→</span>
               </Link>
               <Link href="/cities" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: '#fff', color: '#1C1233', padding: '16px 28px', borderRadius: '14px', fontWeight: 700, fontSize: '16px', border: '1.5px solid rgba(28,18,51,0.14)' }}>
                 Browse Companies
@@ -117,6 +118,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <EntryPaths />
 
       {/* ─── Marquee Section ─── */}
       {/* Creates a continuous sliding text effect to highlight key value props. */}
@@ -236,8 +239,8 @@ export default function HomePage() {
           </p>
           
           <div style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', position: 'relative' }}>
-            <Link href="/register" className="kz-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: '#fff', color: '#3A1E7A', padding: '17px 32px', borderRadius: '14px', fontWeight: 800, fontSize: '17px', boxShadow: '0 14px 36px rgba(0,0,0,0.22)' }}>
-              Join a Sprint <span>→</span>
+            <Link href="#choose-path" className="kz-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: '#fff', color: '#3A1E7A', padding: '17px 32px', borderRadius: '14px', fontWeight: 800, fontSize: '17px', boxShadow: '0 14px 36px rgba(0,0,0,0.22)' }}>
+              Choose your path <span>→</span>
             </Link>
             <Link href="/cities" style={{ display: 'inline-flex', alignItems: 'center', gap: '9px', textDecoration: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', padding: '17px 32px', borderRadius: '14px', fontWeight: 700, fontSize: '17px', border: '1px solid rgba(255,255,255,0.28)' }}>
               Browse Companies

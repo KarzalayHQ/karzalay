@@ -75,7 +75,7 @@ export function Navbar() {
                   <Link href="/login" style={{ textDecoration: 'none', color: '#1C1233', fontSize: '15px', fontWeight: 700 }}>
                     Login
                   </Link>
-                  <Link href="/register" className="kz-cta" style={{
+                  <Link href="/#choose-path" className="kz-cta" style={{
                     textDecoration: 'none', 
                     background: 'linear-gradient(135deg,#7C4DFF,#6C3CE0)', 
                     color: '#fff', padding: '11px 22px', borderRadius: '999px', 
@@ -129,7 +129,7 @@ export function Navbar() {
                 <>
                   <li><Link href="/login" onClick={toggleMobileMenu}>Login</Link></li>
                   <li>
-                    <Link href="/register" className="kz-btn kz-btn-primary" onClick={toggleMobileMenu} style={{ marginTop: '0.5rem' }}>
+                    <Link href="/#choose-path" className="kz-btn kz-btn-primary" onClick={toggleMobileMenu} style={{ marginTop: '0.5rem' }}>
                       Get Started →
                     </Link>
                   </li>

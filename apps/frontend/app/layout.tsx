@@ -14,6 +14,7 @@ import "./globals.css";
 import "../styles/tokens.css";
 // AuthProvider provides authentication state across all child components
 import { AuthProvider } from "../context/AuthContext";
+import { StagingNotice } from "../components/StagingNotice";
 
 /* ─── Font Configuration ─── */
 // Design Decision: Using Inter as the primary sans-serif font for high legibility in UI.
@@ -77,6 +78,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         {/* AuthProvider wraps all children so pages can access useAuth() */}
+        <StagingNotice />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
